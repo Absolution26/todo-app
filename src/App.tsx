@@ -296,7 +296,9 @@ export const App: React.FC = () => {
         {todos.length > 0 && (
           <footer className="todoapp__footer" data-cy="Footer">
             <span className="todo-count" data-cy="TodosCounter">
-              {`${countActiveTodo} items left`}
+              {countActiveTodo === 1
+                ? `${countActiveTodo} item left`
+                : `${countActiveTodo} items left`}
             </span>
 
             <nav className="filter" data-cy="Filter">
